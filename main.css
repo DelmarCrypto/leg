@@ -289,6 +289,29 @@ body {
     font-size: 1em;
 }
 
+.whitepaper-button {
+    background-color: #1c2526;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: left;
+}
+
+.whitepaper-button:hover {
+    background-color: #3a4f50;
+}
+
+.whitepaper-detail {
+    background-color: rgba(255, 215, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
 .stay-informed {
     text-align: center;
 }
@@ -301,6 +324,7 @@ footer {
     border-radius: 0 0 10px 10px;
     margin-top: -20px;
     width: 100%;
+    position: relative;
 }
 
 footer a {
@@ -321,32 +345,39 @@ footer a:hover {
     gap: 20px;
 }
 
-.social-links a, .partner-logos a {
+.social-links a {
     font-size: 24px;
     color: #FFD700;
     transition: color 0.3s;
 }
 
-.social-links a:hover, .partner-logos a:hover {
+.social-links a:hover {
     color: #e6c200;
 }
 
-.partner-logo {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 5px; /* Réduction de la marge pour rapprocher les logos */
+.footer-contact {
+    text-align: right;
+    margin-top: 10px;
 }
 
 .partner-logos {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 5px; /* Réduction de l'espace entre les logos */
+    gap: 5px;
+    margin-top: 20px;
 }
 
 .partner-logos span {
     font-size: 18px;
     color: #FFD700;
     margin-right: 10px;
+}
+
+.partner-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
 }
 
 .partner-logo:hover {
@@ -405,6 +436,9 @@ footer a:hover {
     .partner-logos span {
         margin-right: 0;
         margin-bottom: 5px;
+    }
+    .footer-contact {
+        text-align: center;
     }
 }
 
