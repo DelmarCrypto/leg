@@ -137,7 +137,26 @@
                 <p>"Legatio redéfinit l’investissement immobilier avec la blockchain." - Marc T., Expert Crypto</p>
                 <p>"Une solution simple et sécurisée pour diversifier mon portefeuille crypto." - Sophie R., Investisseuse</p>
             </div>
-            <p class="certifications">Audité par CertiK | Conforme KYC/AML | Partenaire Chainlink</p>
+            <div class="partner-logos">
+                <span>Nos partenaires</span>
+                <!-- Logo LBank -->
+                <a href="https://www.lbank.com/" target="_blank" aria-label="Logo LBank" alt="Logo LBank">
+                    <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg" class="partner-logo">
+                        <text x="10" y="35" font-family="sans-serif" font-size="20" fill="#0A66C2">L</text>
+                        <text x="25" y="35" font-family="sans-serif" font-size="20" fill="#FFD700">B</text>
+                        <path d="M28 20 L33 20 L30.5 25 L33 30 L28 30 Z M28 30 L33 30 L30.5 25 L33 20 L28 20" fill="#000000"/>
+                        <text x="40" y="35" font-family="sans-serif" font-size="20" fill="#0A66C2">ank</text>
+                    </svg>
+                </a>
+                <!-- Logo Chainlink -->
+                <a href="https://chain.link/" target="_blank" aria-label="Logo Chainlink" alt="Logo Chainlink">
+                    <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg" class="partner-logo">
+                        <polygon points="10,15 25,5 40,15 40,35 25,45 10,35" fill="none" stroke="#375BD2" stroke-width="4"/>
+                        <text x="50" y="35" font-family="sans-serif" font-size="20" fill="#375BD2">Chainlink</text>
+                    </svg>
+                </a>
+            </div>
+            <p class="certifications">Audité par CertiK | Conforme KYC/AML</p>
         </div>
 
         <!-- Notre Roadmap -->
@@ -200,11 +219,31 @@
                     <li>Pourquoi Investir ? Rendements passifs et diversification dès 100$.</li>
                 </ul>
                 <h3>Résumé du White Paper</h3>
-                <ul>
-                    <li>Introduction : Présentation de Legatio et de sa vision.</li>
-                    <li>Vision & Mission : Démocratiser l’investissement immobilier.</li>
-                    <li>Modèle Économique : Revenus via staking et frais de plateforme.</li>
-                    <li>Tokenomics : Détails sur le token LEG et sa distribution.</li>
+                <ul class="whitepaper-list">
+                    <li>
+                        <button class="whitepaper-button" data-target="introduction">Introduction</button>
+                        <div id="introduction" class="whitepaper-detail" style="display: none;">
+                            <p>Legatio est une plateforme innovante qui utilise la blockchain pour démocratiser l’accès à l’immobilier.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="whitepaper-button" data-target="vision">Vision & Mission</button>
+                        <div id="vision" class="whitepaper-detail" style="display: none;">
+                            <p>Notre mission est de rendre l’investissement immobilier accessible à tous, partout dans le monde.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="whitepaper-button" data-target="modele">Modèle Économique</button>
+                        <div id="modele" class="whitepaper-detail" style="display: none;">
+                            <p>Legatio génère des revenus via le staking de tokens LEG et des frais de plateforme.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="whitepaper-button" data-target="tokenomics">Tokenomics</button>
+                        <div id="tokenomics" class="whitepaper-detail" style="display: none;">
+                            <p>Le token LEG est distribué de manière équitable entre les investisseurs, l’équipe et les réserves.</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -218,32 +257,16 @@
     </div>
 
     <footer role="contentinfo">
-        <p>Contact : <a href="mailto:legatio.finance@gmail.com">legatio.finance@gmail.com</a> | © 2025 Legatio</p>
+        <p><a href="#faq">FAQ</a></p>
         <p><a href="#legal">Mentions légales</a> | Conformité KYC/AML</p>
         <div class="social-and-partners">
             <div class="social-links">
                 <a href="https://x.com/rdb_legend" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 <a href="https://discord.com/channels/1347668715357077577/1347668716120182888" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
             </div>
-            <div class="partner-logos">
-                <span>Nos partenaires</span>
-                <!-- Logo LBank -->
-                <a href="https://www.lbank.com/" target="_blank" aria-label="Logo LBank" alt="Logo LBank">
-                    <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg" class="partner-logo">
-                        <text x="10" y="35" font-family="sans-serif" font-size="20" fill="#0A66C2">L</text>
-                        <text x="25" y="35" font-family="sans-serif" font-size="20" fill="#FFD700">B</text>
-                        <path d="M28 20 L33 20 L30.5 25 L33 30 L28 30 Z M28 30 L33 30 L30.5 25 L33 20 L28 20" fill="#000000"/>
-                        <text x="40" y="35" font-family="sans-serif" font-size="20" fill="#0A66C2">ank</text>
-                    </svg>
-                </a>
-                <!-- Logo Chainlink -->
-                <a href="https://chain.link/" target="_blank" aria-label="Logo Chainlink" alt="Logo Chainlink">
-                    <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg" class="partner-logo">
-                        <polygon points="10,15 25,5 40,15 40,35 25,45 10,35" fill="none" stroke="#375BD2" stroke-width="4"/>
-                        <text x="50" y="35" font-family="sans-serif" font-size="20" fill="#375BD2">Chainlink</text>
-                    </svg>
-                </a>
-            </div>
+        </div>
+        <div class="footer-contact">
+            <p>Contact : <a href="mailto:legatio.finance@gmail.com">legatio.finance@gmail.com</a> | © 2025 Legatio</p>
         </div>
     </footer>
 
@@ -259,6 +282,26 @@
         timelineItems.forEach((item, index) => {
             item.style.animation = `fadeIn 1s ease ${index * 0.2}s forwards`;
             item.style.opacity = 0;
+        });
+
+        // Gestion des boutons interactifs pour le White Paper
+        const buttons = document.querySelectorAll('.whitepaper-button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const detail = document.getElementById(targetId);
+                const allDetails = document.querySelectorAll('.whitepaper-detail');
+                
+                // Masquer toutes les descriptions sauf celle cliquée
+                allDetails.forEach(d => {
+                    if (d.id !== targetId) {
+                        d.style.display = 'none';
+                    }
+                });
+
+                // Afficher/Masquer la description cliquée
+                detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+            });
         });
     </script>
 </body>
