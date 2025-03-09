@@ -289,7 +289,7 @@ body {
     font-size: 1em;
 }
 
-.whitepaper-button {
+.pitchdeck-button, .whitepaper-button {
     background-color: #1c2526;
     color: #fff;
     border: none;
@@ -301,11 +301,11 @@ body {
     text-align: left;
 }
 
-.whitepaper-button:hover {
+.pitchdeck-button:hover, .whitepaper-button:hover {
     background-color: #3a4f50;
 }
 
-.whitepaper-detail {
+.pitchdeck-detail, .whitepaper-detail {
     background-color: rgba(255, 215, 0, 0.1);
     padding: 10px;
     border-radius: 5px;
@@ -317,7 +317,6 @@ body {
 }
 
 footer {
-    text-align: center;
     padding: 20px;
     background: #3a4f50;
     color: #FFFFFF;
@@ -327,57 +326,68 @@ footer {
     position: relative;
 }
 
-footer a {
-    color: #FFD700;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.social-and-partners {
-    margin-top: 10px;
+.footer-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
+}
+
+.social-links {
+    text-align: left;
 }
 
 .social-links a {
     font-size: 24px;
     color: #FFD700;
     transition: color 0.3s;
+    margin-right: 10px;
 }
 
 .social-links a:hover {
     color: #e6c200;
 }
 
+.footer-links {
+    text-align: center;
+}
+
+.footer-links p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 .footer-contact {
     text-align: right;
-    margin-top: 10px;
 }
 
 .partner-logos {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 2px; /* Réduction de l'espace entre les éléments */
     margin-top: 20px;
 }
 
 .partner-logos span {
     font-size: 18px;
     color: #FFD700;
-    margin-right: 10px;
+    margin-right: 5px; /* Réduction de la marge */
 }
 
 .partner-logo {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 5px;
+    margin: 0 2px; /* Réduction de la marge */
 }
 
 .partner-logo:hover {
@@ -421,9 +431,18 @@ footer a:hover {
         display: block;
         margin: 10px auto;
     }
-    .social-and-partners {
+    .footer-content {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+    }
+    .social-links {
+        text-align: center;
+    }
+    .footer-links {
+        text-align: center;
+    }
+    .footer-contact {
+        text-align: center;
     }
     .partner-logo {
         width: 120px;
@@ -436,9 +455,6 @@ footer a:hover {
     .partner-logos span {
         margin-right: 0;
         margin-bottom: 5px;
-    }
-    .footer-contact {
-        text-align: center;
     }
 }
 
