@@ -334,7 +334,19 @@ footer a:hover {
 .partner-logo {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 10px;
+    margin: 0 5px; /* Réduction de la marge pour rapprocher les logos */
+}
+
+.partner-logos {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Réduction de l'espace entre les logos */
+}
+
+.partner-logos span {
+    font-size: 18px;
+    color: #FFD700;
+    margin-right: 10px;
 }
 
 .partner-logo:hover {
@@ -383,8 +395,16 @@ footer a:hover {
         gap: 10px;
     }
     .partner-logo {
-        width: 120px; /* Réduction pour mobile */
+        width: 120px;
         height: 40px;
+    }
+    .partner-logos {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .partner-logos span {
+        margin-right: 0;
+        margin-bottom: 5px;
     }
 }
 
@@ -396,7 +416,10 @@ footer a:hover {
         padding: 20px;
     }
     .partner-logo {
-        width: 100px; /* Ajustement supplémentaire pour petits écrans */
+        width: 100px;
         height: 33px;
+    }
+    .partner-logos {
+        gap: 2px;
     }
 }
