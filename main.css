@@ -306,10 +306,39 @@ footer {
 footer a {
     color: #FFD700;
     text-decoration: none;
+    margin: 0 10px;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+.social-and-partners {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-links a, .partner-logos a {
+    font-size: 24px;
+    color: #FFD700;
+    transition: color 0.3s;
+}
+
+.social-links a:hover, .partner-logos a:hover {
+    color: #e6c200;
+}
+
+.partner-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.partner-logo:hover {
+    opacity: 0.8;
 }
 
 @keyframes pulse {
@@ -349,6 +378,14 @@ footer a:hover {
         display: block;
         margin: 10px auto;
     }
+    .social-and-partners {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .partner-logo {
+        width: 120px; /* Réduction pour mobile */
+        height: 40px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -357,5 +394,9 @@ footer a:hover {
     }
     .section {
         padding: 20px;
+    }
+    .partner-logo {
+        width: 100px; /* Ajustement supplémentaire pour petits écrans */
+        height: 33px;
     }
 }
