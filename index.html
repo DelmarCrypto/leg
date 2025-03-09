@@ -183,7 +183,7 @@
         </div>
 
         <!-- Questions Fréquentes -->
-        <div class="section faq">
+        <div class="section faq" id="faq">
             <h2>Questions Fréquentes</h2>
             <div class="faq-list">
                 <div class="faq-item">
@@ -212,11 +212,31 @@
             <p>En savoir plus sur Legatio</p>
             <div class="investor-content">
                 <h3>Résumé du Pitch Deck</h3>
-                <ul>
-                    <li>L’Ère de la Tokenisation</li>
-                    <li>Le Problème : Accès limité et coûts élevés dans l’immobilier traditionnel.</li>
-                    <li>La Solution : Tokenisation via blockchain pour une accessibilité accrue.</li>
-                    <li>Pourquoi Investir ? Rendements passifs et diversification dès 100$.</li>
+                <ul class="pitchdeck-list">
+                    <li>
+                        <button class="pitchdeck-button" data-target="tokenisation">L’Ère de la Tokenisation</button>
+                        <div id="tokenisation" class="pitchdeck-detail" style="display: none;">
+                            <p>La tokenisation permet de fractionner des actifs immobiliers en NFTs, rendant l’investissement accessible à tous.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="pitchdeck-button" data-target="probleme">Le Problème</button>
+                        <div id="probleme" class="pitchdeck-detail" style="display: none;">
+                            <p>L’immobilier traditionnel est coûteux et limité par des barrières financières et bureaucratiques.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="pitchdeck-button" data-target="solution">La Solution</button>
+                        <div id="solution" class="pitchdeck-detail" style="display: none;">
+                            <p>Legatio utilise la blockchain pour tokeniser les actifs et démocratiser l’accès à l’immobilier.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="pitchdeck-button" data-target="investir">Pourquoi Investir ?</button>
+                        <div id="investir" class="pitchdeck-detail" style="display: none;">
+                            <p>Investissez dès 100$ et générez des rendements passifs grâce à la tokenisation.</p>
+                        </div>
+                    </li>
                 </ul>
                 <h3>Résumé du White Paper</h3>
                 <ul class="whitepaper-list">
@@ -257,16 +277,18 @@
     </div>
 
     <footer role="contentinfo">
-        <p><a href="#faq">FAQ</a></p>
-        <p><a href="#legal">Mentions légales</a> | Conformité KYC/AML</p>
-        <div class="social-and-partners">
+        <div class="footer-content">
             <div class="social-links">
                 <a href="https://x.com/rdb_legend" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                 <a href="https://discord.com/channels/1347668715357077577/1347668716120182888" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
             </div>
-        </div>
-        <div class="footer-contact">
-            <p>Contact : <a href="mailto:legatio.finance@gmail.com">legatio.finance@gmail.com</a> | © 2025 Legatio</p>
+            <div class="footer-links">
+                <p><a href="#faq">FAQ</a></p>
+                <p><a href="https://www.linkedin.com/feed/" target="_blank">Mentions légales</a> | Conformité KYC/AML</p>
+            </div>
+            <div class="footer-contact">
+                <p>Contact : <a href="mailto:legatio.finance@gmail.com">legatio.finance@gmail.com</a> | © 2025 Legatio</p>
+            </div>
         </div>
     </footer>
 
@@ -284,22 +306,38 @@
             item.style.opacity = 0;
         });
 
-        // Gestion des boutons interactifs pour le White Paper
-        const buttons = document.querySelectorAll('.whitepaper-button');
-        buttons.forEach(button => {
+        // Gestion des boutons interactifs pour le Pitch Deck
+        const pitchdeckButtons = document.querySelectorAll('.pitchdeck-button');
+        pitchdeckButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const targetId = button.getAttribute('data-target');
                 const detail = document.getElementById(targetId);
-                const allDetails = document.querySelectorAll('.whitepaper-detail');
+                const allDetails = document.querySelectorAll('.pitchdeck-detail');
                 
-                // Masquer toutes les descriptions sauf celle cliquée
                 allDetails.forEach(d => {
                     if (d.id !== targetId) {
                         d.style.display = 'none';
                     }
                 });
 
-                // Afficher/Masquer la description cliquée
+                detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // Gestion des boutons interactifs pour le White Paper
+        const whitepaperButtons = document.querySelectorAll('.whitepaper-button');
+        whitepaperButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const detail = document.getElementById(targetId);
+                const allDetails = document.querySelectorAll('.whitepaper-detail');
+                
+                allDetails.forEach(d => {
+                    if (d.id !== targetId) {
+                        d.style.display = 'none';
+                    }
+                });
+
                 detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
             });
         });
