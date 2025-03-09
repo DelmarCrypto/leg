@@ -46,6 +46,7 @@ body {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
+    margin: 0 10px;
 }
 
 .cta-button:hover {
@@ -250,19 +251,42 @@ body {
     text-align: center;
 }
 
-.investors ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 20px;
+.investor-buttons {
+    margin: 20px 0;
 }
 
-.investors ul ul {
+.investor-content {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.investor-content h3 {
+    color: #FFD700;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.investor-content ul {
     list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.investor-content ul ul {
+    list-style-type: circle;
     padding-left: 20px;
 }
 
-.investors li {
+.investor-content li {
     margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.stay-informed {
+    text-align: center;
 }
 
 footer {
@@ -316,6 +340,10 @@ footer a:hover {
     }
     .before-after-content {
         flex-direction: column;
+    }
+    .investor-buttons .cta-button {
+        display: block;
+        margin: 10px auto;
     }
 }
 
