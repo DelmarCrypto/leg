@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1c2526, #3a4f50);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #FFD700, #1E90FF);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.header h1, .header p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #1c2526;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e6c200;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(28, 37, 38, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.section {
+    margin: 40px 0;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(10, 14, 31, 0.8);
+    animation: pulse 2s infinite;
+}
+
+.section h2 {
+    color: #FFD700;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.features .feature-list, .why-choose-list, .how-to-invest-steps, .security-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-item, .why-choose-item, .how-to-invest-step, .security-item {
+    background-color: rgba(255, 215, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover, .why-choose-item:hover, .how-to-invest-step:hover, .security-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.3);
+}
+
+.feature-icon, .step-icon, .why-icon, .security-icon {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.how-to-invest-step .step-icon {
+    color: #FFD700;
+}
+
+.feature-item p, .why-choose-item p, .how-to-invest-step p, .security-item p {
+    font-size: 1.1em;
+}
+
+.before-after-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.before, .after {
+    background-color: rgba(28, 37, 38, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.before h3, .after h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.before ul, .after ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.before ul li, .after ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.services .service-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: rgba(28, 37, 38, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.service-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    color: #fff;
+}
+
+.service-item li {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.testimonials .testimonial-list {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.testimonials .testimonial-list p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.certifications {
+    text-align: center;
+    font-weight: bold;
+    color: #1E90FF;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.timeline-item {
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.timeline-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.faq-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.faq-item {
+    background-color: rgba(30, 144, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.faq-item h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.faq-item p {
+    font-size: 1em;
+}
+
+.investors, .stay-informed {
+    text-align: center;
+}
+
+.investors ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.investors ul ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.investors li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #3a4f50;
+    color: #FFFFFF;
+    border-radius: 0 0 10px 10px;
+    margin-top: -20px;
+    width: 100%;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    .header p {
+        font-size: 1.2em;
+    }
+    .section h2 {
+        font-size: 2em;
+    }
+    .feature-item, .why-choose-item, .how-to-invest-step, .security-item, .service-item, .timeline-item, .faq-item, .before, .after {
+        width: 100%;
+    }
+    .before-after-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .section {
+        padding: 20px;
+    }
+}
